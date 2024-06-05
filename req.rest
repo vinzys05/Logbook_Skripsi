@@ -1,0 +1,207 @@
+### bagian prodi
+GET http://127.0.0.1:5000/prodi
+###
+POST http://127.0.0.1:5000/prodi
+Content-Type: application/json
+
+{"prodi": "Management"}
+###
+PUT http://127.0.0.1:5000/prodi/2
+Content-Type: application/json
+
+{
+    "prodi": "Teknologi Informasi",
+    "id":2
+}
+###
+DELETE http://127.0.0.1:5000/prodi/2
+
+### bagian dosen
+GET http://127.0.0.1:5000/dosen
+###
+GET http://127.0.0.1:5000/dosen/3
+###
+POST http://127.0.0.1:5000/dosen
+Content-Type: application/json
+
+{
+    "nidn":"10101010",
+    "nama":"Gautama"
+}
+###
+PUT http://127.0.0.1:5000/dosen/3
+Content-Type: application/json
+
+{
+    "nidn":"937182",
+    "nama":"Gautama",
+    "id":3
+}
+###
+DELETE http://127.0.0.1:5000/dosen/1
+
+### bagian Mahasiswa
+GET http://127.0.0.1:5000/mahasiswa
+###
+GET http://127.0.0.1:5000/mahasiswa/1
+###
+POST http://127.0.0.1:5000/mahasiswa
+Content-Type: application/json
+
+{
+    "npm":"2332002",
+    "prodi":"Teknologi Informasi",
+    "nama":"kelvin"
+}
+###
+PUT http://127.0.0.1:5000/mahasiswa/1
+Content-Type: application/json
+
+{
+    "npm":"2332053",
+    "prodi":"Teknologi Informasi",
+    "nama":"Gabriel Tarikh Omar"
+}
+
+### bagian kaprodi
+GET http://127.0.0.1:5000/kaprodi
+###
+GET http://127.0.0.1:5000/kaprodi/1
+### 
+POST http://127.0.0.1:5000/kaprodi
+Content-Type: application/json
+
+{
+    "npm":"2332053",
+    "validasi_kaprodi":"pending", 
+    "nama":"Hadin",
+    "konsultasi":"Pemilihan Topik Skripsi",
+    "nidn":"1234567890"
+    //pada bagian validasi hanya bisa menyimpan tiga string (approved,pending,rejected)
+}
+###
+PUT http://127.0.0.1:5000/kaprodi/1
+Content-Type: application/json
+
+{
+    "npm":"2332002",
+    "validasi_kaprodi":"approved",
+    "nama":"Hadin",
+    "konsultasi":"Revisi Bab I",
+    "nidn":"1234567890",
+    "id":1
+}
+
+### bagian management-pembimbing
+GET http://127.0.0.1:5000/management
+###
+GET http://127.0.0.1:5000/management/6
+###
+POST http://127.0.0.1:5000/management
+Content-Type: application/json
+
+{
+    "npm":"2332002",
+    "nidn":"937182",
+    "nama":"Gautama",
+    "konsultasi_pembimbing":"bahas judul skripsi"
+
+}
+###
+PUT http://127.0.0.1:5000/management/6
+Content-Type: application/json
+
+{
+    "npm":"2332002",
+    "nidn":"937182",
+    "nama":"Gautama",
+    "konsultasi_pembimbing":"revisi bab 1",
+    "id":6
+}
+
+### bagian user
+GET http://127.0.0.1:5000/user
+###
+POST http://127.0.0.1:5000/user
+Content-Type: application/json
+
+{
+    "username":"kdp0018@gmail.com",
+    "password":"123",
+    "npm":"2332053",
+    "gender":"male",
+    "status":"mahasiswa"
+
+}
+
+### bagian admin
+GET http://127.0.0.1:5000/admin
+###
+POST http://127.0.0.1:5000/admin
+Content-Type: application/json
+
+{
+    "username":"kdp0018@gmail.com",
+    "password":"123",
+    "nidn":"937182",
+    "gender":"male",
+    "status":"mahasiswa"
+
+}
+
+### bagian skripsi
+GET http://127.0.0.1:5000/skripsi
+###
+GET http://127.0.0.1:5000/skripsi/1
+###
+POST http://127.0.0.1:5000/skripsi
+Content-Type: application/json
+
+{   
+    "judul_skripsi":"Ternak Lele",
+    "npm":"2332002",
+    "prodi":"Teknologi Informasi",
+    "konsultasi_pembimbing":"Gagal jadi anak TI"
+}
+###
+PUT http://127.0.0.1:5000/skripsi/1
+Content-Type: application/json
+
+{   
+    "judul_skripsi":"Ternak Ayam",
+    "npm":"2332053",
+    "prodi":"Teknologi Informasi",
+    "konsultasi_pembimbing":"tidak jelas juga",
+    "id":1
+}
+
+### bagian logbook
+GET http://127.0.0.1:5000/logbook
+###
+GET http://127.0.0.1:5000/logbook/1
+###
+POST http://127.0.0.1:5000/logbook
+Content-Type: application/json
+
+{
+    "npm":"2332002",
+    "judul_skripsi":"Ternak Lele",
+    "tanggal":"2024-05-05",
+    "permasalahan_skripsi":"tidak ada ",
+    "solusi":"tidak ada",
+    "tugas_minggu_depan":"lanjutoka",
+    "pendapat_pembimbing":"perlu usaha",
+    "progress_skripsi":"",
+    "status_validasi":"pending",
+    "id_bimbingan":"6",
+    "id_skripsi":"3"
+
+}
+###
+PUT http://127.0.0.1:5000/logbook/1
+Content-Type: application/json
+
+{
+
+    "id":1
+}
