@@ -8,3 +8,4 @@ isi user dan password datbase di .env
 
 jika ada error module tkPDFviewer : 
 https://discuss.python.org/t/attributeerror-page-object-has-no-attribute-getpixmap/20504/8 
+### tukar sesuai methodnya
