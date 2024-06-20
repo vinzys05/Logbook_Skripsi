@@ -1,15 +1,10 @@
-set user dan database password di .env
+pip install -r requirements.txt 
+
+isi credential database di file config.py 
 
 
-
-set database credential di config.py
-
+isi user dan password datbase di .env
 
 
-pip install - r requirements.txt
-
-
-
-
-jika ada error dalam module tkpdfviewer :
-https://discuss.python.org/t/attributeerror-page-object-has-no-attribute-getpixmap/20504/8
+jika ada error module tkPDFviewer : 
+https://discuss.python.org/t/attributeerror-page-object-has-no-attribute-getpixmap/20504/8 
